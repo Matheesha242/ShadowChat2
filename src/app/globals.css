@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-darkBg text-offWhite font-mono antialiased;
+    background-image: radial-gradient(circle at 10% 20%, rgba(0, 119, 182, 0.08) 0%, rgba(11, 19, 43, 0.98) 90%);
+  }
+  ::selection {
+    @apply bg-neonBlue/30 text-whitePure;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-darkCard/70 backdrop-blur-md border border-neonBlue/20 rounded-2xl shadow-xl;
+  }
+  .neon-border {
+    @apply border border-neonBlue/50 shadow-[0_0_8px_rgba(72,202,228,0.3)];
+  }
+  .btn-primary {
+    @apply px-6 py-3 bg-electricCyan hover:bg-neonBlue text-whitePure font-bold rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(72,202,228,0.6)] transform hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply px-5 py-2 border border-neonBlue text-neonBlue hover:bg-neonBlue/20 rounded-lg transition-all duration-200;
+  }
+  .input-dark {
+    @apply w-full bg-darkBg/80 border border-neonBlue/30 rounded-lg px-4 py-2 text-offWhite focus:outline-none focus:border-neonBlue focus:ring-1 focus:ring-neonBlue transition;
+  }
+}
